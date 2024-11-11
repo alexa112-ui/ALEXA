@@ -14,15 +14,15 @@ public class FormaPage {
     @FindBy(id = "lastName")
     WebElement lastNameEl;
     @FindBy(id = "userEmail")
-    WebElement ;
+    WebElement userEmailEl;
+
     public FormaPage(WebDriver driver) {
         FormaPage.driver = driver;
         PageFactory.initElements(driver, this);
     }
 
-    public void setFirstName(String firstNameParam) {
-        firstNameEl.sendKeys(firstNameParam);
-    }
-    public void setLastName(String LastNameParam) {
-        lastNameEl.sendKeys(LastNameParam);
-}}
+    public void setFirstName(String firstNameParam) {firstNameEl.sendKeys(firstNameParam);}
+    public void setLastName(String LastNameParam) {lastNameEl.sendKeys(LastNameParam);}
+    public void setUserEmail(String userEmailParam) {userEmailEl.sendKeys(userEmailParam);}
+
+}
