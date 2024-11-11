@@ -25,10 +25,11 @@ public class FormaTest extends Basic{
     }
 
     @Test
-    public void FormaTngTest() {
+    public void FormaTngTest() throws InterruptedException {
         driver.get("https://demoqa.com/automation-practice-form");
         FormaPage formaPage = new FormaPage(driver);
         formaPage .setFirstName(FIRST_NAME);
+        Thread.sleep(5000);
     }
 
     @AfterClass
