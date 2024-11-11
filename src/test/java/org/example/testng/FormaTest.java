@@ -1,6 +1,7 @@
 package org.example.testng;
 
 import org.example.demoq.FormaPage;
+import org.example.utils.SeleniumDriver;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
@@ -14,12 +15,13 @@ public class FormaTest extends Basic{
 
     @BeforeClass
     public void beforeClass() {
-        System.setProperty("webdriver.chrome.driver", "D:\\chromedriver-win64\\chromedriver.exe");
-        ChromeOptions options = new ChromeOptions();
-        options.addArguments("--remote-allow-origins=*");
-        WebDriver driver = new ChromeDriver(options);
-        driver.manage().window().maximize();
-        FormaTest.driver = driver;
+//        System.setProperty("webdriver.chrome.driver", "D:\\chromedriver-win64\\chromedriver.exe");
+//        ChromeOptions options = new ChromeOptions();
+//        options.addArguments("--remote-allow-origins=*");
+//        WebDriver driver = new ChromeDriver(options);
+//        driver.manage().window().maximize();
+//        FormaTest.driver = driver;
+        driver= SeleniumDriver.getRemoteDriver();
     }
 
     @Test
